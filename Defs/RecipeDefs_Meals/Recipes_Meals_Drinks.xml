@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<RecipeDef>
+		<defName>MakePSIDrink</defName>
+		<label>Создать Пси стимулятор</label>
+		<description>Создание пси стимулятора. 3шт.</description>
+		<jobString>Создаёт стимуляторы.</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1350</workAmount>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FruitDrink</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Synchronite</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Synchronite</li>
+				<li>FruitDrink</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<PSIDrink>3</PSIDrink>
+		</products>
+		<skillRequirements>
+		 <Crafting>3</Crafting>
+		 <Medicine>5</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<researchPrerequisite>SynchronisityRefining</researchPrerequisite>
+	</RecipeDef>
+
+</Defs>

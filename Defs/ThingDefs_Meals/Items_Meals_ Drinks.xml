@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<ThingDef ParentName="MealBeverage">
+		<defName>PSIDrink</defName>
+		<label>Пси-Стимулятор</label>
+		<description>-Последний шанс для псионика-</description>
+		<graphicData>
+			<texPath>Things/Item/Drug/Psidrink</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stackLimit>3</stackLimit>
+		<statBases>
+			<MarketValue>500</MarketValue>
+			<Nutrition>0.15</Nutrition>
+		</statBases>
+		<thingCategories>
+			<li>Energetics</li>
+		</thingCategories>
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+			<joy>0.17</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Drink</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Принять {0}</ingestCommandString>
+			<ingestReportString>Принимает {0}.</ingestReportString>
+			<tasteThought>HadFruitDrink</tasteThought>
+			<chairSearchRadius>25</chairSearchRadius>
+			<joyKind>Gluttonous</joyKind>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>Hediff_PSI</hediffDef>
+					<severity>1</severity>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetPsyfocus">
+					<offset>1</offset>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<addictiveness>0</addictiveness>
+				<listOrder>1100</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>
